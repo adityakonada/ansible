@@ -1,5 +1,4 @@
-#we are grouping here. 
-
+#ansible invertory file is nothing a list of hosts that ansible server can connect to.  #we are grouping here. 
 
 
 172.33.22.1
@@ -14,10 +13,11 @@
 172.33.22.6
 
 [web]
-172.33.22.7
-172.33.22.8
+18.232.132.28
 
-[roboshop:children]
+[roboshop:children] 
 user
 cart
 web
+
+#roboshop:children --> group of groups 
