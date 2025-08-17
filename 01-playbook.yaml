@@ -1,0 +1,7 @@
+#first of all, we need inventory file. 
+- name: ping playbook 
+  hosts: web #which host are we connecting
+  tasks: #list of tasks, (like list of commands in shell script)
+    -name: ping the server
+      ansible.builtin.ping: #module name  -> ping module
+
