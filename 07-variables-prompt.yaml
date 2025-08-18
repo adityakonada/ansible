@@ -4,7 +4,7 @@
     - name: user1
       prompt: "Please enter your username"
       private: false
-    - password: password1
+    - name: password1
       prompt: "please enter the password"
       private: false
   tasks:
