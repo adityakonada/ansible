@@ -1,11 +1,11 @@
 - name: multi play book
   host: localhost
-  task: printing multi 
+  tasks: printing multi 
   anisble.builtin.debug:
     msg: "this msg is from task 1"
     
 - name: multi play book
   host: localhost
-  task: printing multi 
+  tasks: printing multi 
   anisble.builtin.debug:
     msg: "this msg is from task 2"
