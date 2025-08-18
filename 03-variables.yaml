@@ -1,0 +1,6 @@
+- name: variables chap1
+  hosts: localhost
+  tasks:
+    -name: testing variables
+    ansible.builtin.debug:
+      msg: "I am aditya Konada, learning Devops"
