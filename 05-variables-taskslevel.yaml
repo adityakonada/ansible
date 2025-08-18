@@ -1,6 +1,16 @@
+# Task level variables 
 - name: variables learning
   hosts: localhost
+  vars:
+    student_name: "ADITYA KONADA"
+    course: "Devops"
+    duration: "110HR"
   tasks:
-  - name: variable from files
+  - name: variables printing
+    vars: #inheritence concept, overwriting course variable by declaring in task level. 
+      course: "task-devops" 
     ansible.builtin.debug:
-      msg: "the student name is {{student_name}} studying course{{course}} of duration {{duration}}"
+      msg: "the name is {{student_name}} studying {{course}} of duration {{duration}}"
+
+
+# TASK level variables will OVERWRITE play level variables == this is called INHERTIANCE. 
