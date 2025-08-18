@@ -9,6 +9,6 @@
 - name: PLAY-2
   hosts: localhost
   tasks:
-  - name: Play 2 and task 2 
+  - name: PLAY-2 and tASK-2 
     anisble.builtin.debug:
       msg: "this msg is from play 2 & task 2"
