@@ -1,25 +1,29 @@
 - name: data types
   hosts: localhost
   vars:
-    NAME:ADITYA KONADA
-  vars:
-    EXPERIENCE: 
+    NAME: ADITYA KONADA
+    SKILLS:
       -AWS
       -DevOps
       -python
-  vars:
+    EXPERIENCE: 
     AWS: 3 years
     DevOps: 1 year
     python: 3 years
+    STUDENT: true
   tasks:
-    - name: printing the data types
+    - name: printing key value pair
       ansible.builtin.debug:
         msg: "my name is {{NAME}}" 
 
-    - name: printing the data types
+    - name: printing lists data type
       ansible.builtin.debug:
-        msg: "I have experience in {{EXPERIENCE}} "
-        
-    - name: printing the data types
+        msg: "I have skills in {{SKILLS}} "
+
+    - name: printing the map data type
       ansible.builtin.debug:
         msg: " experience in AWS is {{AWS}} , in DevOps :{{DevOps}} in python : {{python}}  "
+    
+    - name: printing boolean
+      ansible.builtin.debug:
+        msg: "am I a student? {{STUDENT}}" 
