@@ -1,10 +1,10 @@
-- name: variables chap1
+- name: variables from play level
   hosts: localhost
   vars:
-  NAME: "ADITYA KONADA"
-  COURSE: "Devops"
-  DURATION: "110HR"
+    name: "ADITYA KONADA"
+    course: "Devops"
+    duration: "110HR"
   tasks:
   - name: testing variables
     ansible.builtin.debug:
-      msg: "I am {{NAME}}, learning {{COURSE}} and duration of course is {{DURATION}}"
+      msg: "I am {{ name }}, learning {{course}} and duration of course is {{duration}}"
