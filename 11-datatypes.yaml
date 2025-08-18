@@ -1,0 +1,25 @@
+- name: data types
+  hosts: localhost
+  vars:
+    NAME:ADITYA KONADA
+  vars:
+    EXPERIENCE: 
+      -AWS
+      -DevOps
+      -python
+  vars:
+    AWS: 3 years
+    DevOps: 1 year
+    python: 3 years
+  tasks:
+    - name: printing the data types
+      ansible.builtin.debug:
+        msg: "my name is {{NAME}}" 
+
+    - name: printing the data types
+      ansible.builtin.debug:
+        msg: "I have experience in {{EXPERIENCE}} "
+        
+    - name: printing the data types
+      ansible.builtin.debug:
+        msg: " experience in AWS is {{AWS}} , in DevOps :{{DevOps}} in python : {{python}}  "

@@ -4,3 +4,10 @@
     - name: giving variables from commandline or terminal
       ansible.builtin.debug:
         msg: " Hello {{PERSON}} and  good {{WISHES}}"
+
+
+
+# we are declaring/giving variables through command line/ terminal 
+
+# command to be given in terminal for the above script
+#  ansible-playbook -i inventory.ini -e ansible_user=centos -e ansible_password=DevOps321 -e PERSON="Aditya Konada" -e WISHES="morning" 09-variables-cmdline-args.yaml
