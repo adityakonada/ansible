@@ -6,6 +6,6 @@
     duration: "110HR"
   tasks:
   - name: variables printing
-    course: task-devops
+    course: "task-devops"
     ansible.builtin.debug:
       msg: "the name is {{student_name}} studying {{course}} of duration {{duration}}"
