@@ -1,12 +1,6 @@
 - name: variables learning
   hosts: localhost
-  vars:
-    student_name: "ADITYA KONADA"
-    course: "Devops"
-    duration: "110HR"
   tasks:
-  - name: variables printing
-    vars:
-      course: "task-devops"
+  - name: variable from files
     ansible.builtin.debug:
-      msg: "the name is {{student_name}} studying {{course}} of duration {{duration}}"
+      msg: "the student name is {{student_name}} studying course{{course}} of duration {{duration}}"
