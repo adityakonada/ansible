@@ -1,8 +1,8 @@
 - name: variables learning
   hosts: localhost
-  vars_files:
-    variables1.yaml
-  tasks:
+  vars_files: 
+  - variables1.yaml #variables being refered from seperate file == variables.yaml (variables declared here)
+  tasks: 
   - name: variable from files
     ansible.builtin.debug:
       msg: "the student name is {{student_name}} studying course{{course}} of duration {{duration}}"
