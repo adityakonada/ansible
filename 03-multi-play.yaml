@@ -1,12 +1,14 @@
 #playbook is a list of Plays
-- name: multi play book
+- name: Play 1
   hosts: localhost
-  tasks: printing multi 
-  anisble.builtin.debug:
-    msg: "this msg is from task 1"
+  tasks:  
+  - name: play 1 and task 1
+    anisble.builtin.debug:
+      msg: "this msg is from task 1"
     
-- name: multi play book
+- name: Play 2
   hosts: localhost
-  tasks: printing multi 
-  anisble.builtin.debug:
-    msg: "this msg is from task 2"
+  tasks:
+    -name: Play 2 and task 2 
+    anisble.builtin.debug:
+      msg: "this msg is from task 2"
