@@ -7,4 +7,4 @@
   tasks:
     - name: variables printing
       ansible.builtin.debug:
-        msg: "this msg is printed {{student_name}} studying {{Devops} of duration{{duration}}"
+        msg: this msg is printed {{student_name}} studying {{Devops} of duration{{duration}}
