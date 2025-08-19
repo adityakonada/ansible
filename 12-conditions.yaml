@@ -4,8 +4,8 @@
   tasks:
     - name: Id-ing roboshop
       ansible.builtin.command: id roboshop
-      register: user_var
-      ignore_errors: true
+      register: user_var #user_var is a variable 
+      ignore_errors: true #ansible will not exit even if it gets error
 
     - name: printing register value of user_var
       ansible.builtin.debug:
@@ -13,10 +13,10 @@
 
     - name: print the exit status
       ansible.builtin.debug:
-        msg: "the exit status is {{user_var.rc}}"
+        msg: "the exit status is {{user_var.rc}}" #rc is exit status in .json
 
     - name: creating roboshop user using coditions
       ansible.builtin.user:
-        name: roboshop 
-      when: user_var.rc != 0
+        name: roboshop
+      when: user_var.rc != 0 #when is condition: 
     
