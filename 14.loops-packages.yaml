@@ -1,0 +1,12 @@
+- name: loops-package
+  hosts: localhost
+  tasks:
+    - name: installing packages in loop
+      ansible.builtin.package: # module/command is package
+        name: "{{item}}"
+        state: present # item is a default syntax (you cannot give as you wish instead of item), in which each value in loop is reffered here
+      loop:
+      - git
+      - mysql
+      - nginx
+      - postfix

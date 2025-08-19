@@ -3,7 +3,7 @@
   tasks:
     - name: print loops
       ansible.builtin.debug:
-        msg: "the names in loops are printed {{item}}"
+        msg: "the names in loops are printed {{item}}" # item is a default syntax (you cannot give as you wish instead of item), in which each value in loop is reffered here
       loop:
       - aditya
       - konada
