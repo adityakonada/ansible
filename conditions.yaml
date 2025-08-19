@@ -1,0 +1,22 @@
+- name: learning conditions
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Id-ing roboshop
+      ansible.builtin.command: id roboshop
+      register: user_var
+
+    - name: printing register value of user_var
+      ansible.builtin.debug:
+        msg: "the user_var output is {{user_var}}"
+
+    - name: print the exit status
+      ansible.builtin.debug:
+        msg: "the exit status is {{user_var.rc}}"
+
+    - name: creating roboshop user using coditions
+      ansible.builtin.user:
+        name:roboshop 
+      when: 
+        user_var.rc != 0
+    

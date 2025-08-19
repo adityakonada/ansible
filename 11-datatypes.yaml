@@ -1,23 +1,23 @@
 - name: data types
   hosts: localhost
   vars:
-    NAME: ADITYA KONADA
-    SKILLS:
+    NAME: ADITYA KONADA # key: pair data type
+    SKILLS: # list data type -> starts with a -
       -AWS
       -DevOps
       -python
-    EXPERIENCE: 
+    EXPERIENCE: # map data type -> contains key:pair values in it. 
     AWS: 3 years
     DevOps: 1 year
     python: 3 years
-    STUDENT: true
-  tasks:
+    STUDENT: true # boolean data type -> true/false
+  tasks: # --> which data type is this? LIST ! because it contains a -
     - name: printing key value pair
-      ansible.builtin.debug:
+      ansible.builtin.debug: 
         msg: "my name is {{NAME}}" 
 
     - name: printing lists data type
-      ansible.builtin.debug:
+      ansible.builtin.debug: # what data type is this? MAP ! because it DOES NOT a - and also have key:pair values in it.
         msg: "I have skills in {{SKILLS}} "
 
     - name: printing the map data type
@@ -27,3 +27,5 @@
     - name: printing boolean
       ansible.builtin.debug:
         msg: "am I a student? {{STUDENT}}" 
+
+# ULTIMATELY ANYTHING IS A KEY:VALUE PAIR IN THIS CONCEPT. 
