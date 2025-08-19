@@ -17,7 +17,6 @@
 
     - name: creating roboshop user using coditions
       ansible.builtin.user:
-        name:roboshop 
-      when: 
-        user_var.rc != 0
+        name: roboshop 
+      when: user_var.rc != 0
     
