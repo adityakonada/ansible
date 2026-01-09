@@ -3,7 +3,7 @@
   vars_prompt:
     - name: user1 #name is format (mandatory)
       prompt: "Please enter your username"
-      private: false #user can see what he is typing
+      private: true #user can see what he is typing
     - name: password1 #name is format (mandatory)
       prompt: "please enter the password"
       private: true #user cannot see what he is typing while typing password
